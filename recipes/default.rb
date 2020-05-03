@@ -61,3 +61,13 @@ end
 execute 'enable_module_nginx' do
   command 'sudo filebeat modules enable nginx'
 end
+
+service 'metricbeat' do
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
+end
+
+service 'filebeat' do
+  supports status: true, restart: true, reload: true
+  action [:enable, :start]
+end
