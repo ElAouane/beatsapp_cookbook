@@ -19,6 +19,10 @@ execute 'enable_module_system' do
   command 'sudo metricbeat modules enable system'
 end
 
+execute 'enable_module_system' do
+  command 'sudo metricbeat modules enable http'
+end
+
 
 execute 'download_filebeat' do
   command 'curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb'
