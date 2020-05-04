@@ -43,9 +43,9 @@ execute 'fix_template' do
   command 'sudo chmod go-w /etc/metricbeat/metricbeat.yml'
 end
 
-#execute 'setup_dasboards' do
+# execute 'setup_dasboards' do
 #  command 'sudo metricbeat setup'
-#end
+# end
 
 template 'etc/filebeat/filebeat.yml' do
   source 'filebeat.yml.erb'
