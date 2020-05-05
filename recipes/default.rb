@@ -19,7 +19,7 @@ execute 'enable_module_system' do
   command 'sudo metricbeat modules enable system'
 end
 
-execute 'enable_module_system' do
+execute 'enable_module_http' do
   command 'sudo metricbeat modules enable http'
 end
 
